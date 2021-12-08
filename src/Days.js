@@ -1,10 +1,10 @@
 import React from "react";
 
-function Days(hi, lo, description) {
+function Days(hi, low, description) {
     return (
         <div>
             <div>Forcast: {description}</div>
-            <div>Temp: {hi} / {lo}</div>
+            <div>Temp: {hi} / {low}</div>
         </div>
 
     )

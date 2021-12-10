@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 
-function Days(hi, low, description) {
+import { WeatherContext } from './context';
+
+function Days({ index }) {
+    const { weatherData } = useContext(WeatherContext);
+
+    console.log('days', {
+        weatherData,
+        index
+    })
+
+    const dayWeather = weatherData[index];
+
     return (
         <div>
-            <div>Forcast: {description}</div>
-            <div>Temp: {hi} / {low}</div>
+            <div>Forcast: {dayWeather.Description}</div>
+            <div>Temp: {dayWeather.Hi} / {dayWeather.Low}</div>
         </div>
-
-    )
+    );
 }
 
 export default Days

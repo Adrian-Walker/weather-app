@@ -2,10 +2,52 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding: 8px;
+
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 549px) {
     .day-list {
         flex-direction: column;
     }
+}
+
+.navigation a {
+    letter-spacing: 3px;
+    text-decoration: none;
+
+}
+
+/* link {
+    padding: 8px;
+    background-color: #dddddd;
+    display: block;
+    width: 60px;
+} */
+
+ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    font-size: 20px;
+    background-color: whitesmoke;
+}
+
+li {
+    padding: 5px;
+    border-style: ridge;
+    
+
+}
+
+li:hover{
+    background-color: red;
+}
+
+.dayWeather{
+    border-style: solid;
+    padding: 2px;
+    padding-left: 15px;
+    padding-right: 5px;
+    margin: 10px;
 }

@@ -29,7 +29,8 @@ function App() {
         setWeatherData(res.DailyForecasts.map(forecast => ({
           Low: forecast.Temperature.Minimum.Value,
           High: forecast.Temperature.Maximum.Value,
-          Description: forecast.Day.IconPhrase
+          Description: forecast.Day.IconPhrase,
+          Pic: forecast.Day.Icon
         })
         ));
       });
@@ -38,10 +39,13 @@ function App() {
 
   return (
     <div className="App">
-      <nav>
-        <Link to="/"> 7 Day </Link>
-        <Link to="/three-day"> 3 Day </Link>
-        <Link to="/Daily"> Daily </Link>
+      <nav className="navigation">
+        <ul>
+          <li> <Link to="/"> 7 Day </Link></li>
+          <li> <Link to="/three-day"> 3 Day </Link></li>
+          <li> <Link to="/Daily"> Daily </Link></li>
+        </ul>
+
       </nav>
 
 

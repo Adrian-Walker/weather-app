@@ -68,11 +68,14 @@ function App() {
   );
 }
 
+
+// render weather day component: 1 day | 3 day | 7 day
 const DaySelector = ({ weather = [] }) => {
 
   return (
     <div className="day-list">
       {!!weather && weather.map((d, index) => (
+        // if weather data is not null, then render Days component
         <div key={index}>
           <Days index={index} />
         </div>
@@ -81,6 +84,7 @@ const DaySelector = ({ weather = [] }) => {
   )
 }
 
+// wrapping component with context provider
 const withWeatherState = (Component) => {
   return (props) => {
     return (

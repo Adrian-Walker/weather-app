@@ -6,10 +6,10 @@ function Days({ index }) {
     // getting weather data
     const { weatherData } = useContext(WeatherContext);
 
-    console.log('days', {
-        weatherData,
-        index
-    });
+    // console.log('days', {
+    //     weatherData,
+    //     index
+    // });
 
     // individual day weather data
     const dayWeather = weatherData[index];

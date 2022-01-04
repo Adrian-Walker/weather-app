@@ -15,6 +15,7 @@ function App() {
   const location = '13003_PC?';
   const apikey = 'qUxfCn6X6leA0rZvXTaDHIXSmNkX1l78';
 
+  // use hook into context to give access to the context
   const {
     weatherData,
     setWeatherData
@@ -84,7 +85,7 @@ const DaySelector = ({ weather = [] }) => {
   )
 }
 
-// wrapping component with context provider
+// wrapping component with context provider, allowing nested components under the App to have access to weather data
 const withWeatherState = (Component) => {
   return (props) => {
     return (
